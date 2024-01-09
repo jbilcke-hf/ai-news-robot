@@ -4,22 +4,26 @@ import { ApiResponse } from "./types.mts"
 export async function getNews(): Promise<ApiResponse> {
 
   const q = [
-    "ai",
-    "artificial intelligence",
+    // "ai",
+    // "artificial intelligence",
     "openai",
     "huggingface",
-    "hugging face",
-    "stable diffusion",
-    "ai ethics",
-    "tesla optimus",
-    "Optimus Gen2",
+    // "hugging face",
+    // "stable diffusion",
+    // "ai ethics",
+    // "tesla optimus",
+   // "Optimus Gen2",
+   "LLM",
+   "chatgpt",
+   "runwayml",
+   "pikalabs",
     "sdxl",
-    "gaussian splatting",
-    "latent space",
-    "gpu",
-    "nvidia",
-    "spatial computing",
-    "apple vision pro"
+   //  "gaussian splatting",
+   //  "latent space",
+    // "gpu",
+    // "nvidia",
+   // "spatial computing",
+    // "apple vision pro"
   ].join(" OR ")
 
   const country = [

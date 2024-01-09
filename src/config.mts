@@ -19,4 +19,6 @@ try {
 }
 
 export const huggingfaceApiKey = `${process.env.AI_NEWS_HUGGINGFACE_API_KEY || ""}`
+export const hfInferenceApiModel = `${process.env.AI_NEWS_HUGGINGFACE_INFERENCE_API_MODEL || ""}`
+
 export const newsdataApiKey = `${process.env.AI_NEWS_NEWSDATA_API_KEY || ""}`
