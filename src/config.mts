@@ -18,7 +18,10 @@ try {
   console.log("using .env")
 }
 
-export const huggingfaceApiKey = `${process.env.AI_NEWS_HUGGINGFACE_API_KEY || ""}`
+export const hfUsername = `${process.env.AI_NEWS_HUGGINGFACE_USERNAME || ""}`
+export const hfDataset = `${process.env.AI_NEWS_HUGGINGFACE_DATASET || ""}`
+
+export const hfApiKey = `${process.env.AI_NEWS_HUGGINGFACE_API_KEY || ""}`
 export const hfInferenceApiModel = `${process.env.AI_NEWS_HUGGINGFACE_INFERENCE_API_MODEL || ""}`
 
 export const newsdataApiKey = `${process.env.AI_NEWS_NEWSDATA_API_KEY || ""}`

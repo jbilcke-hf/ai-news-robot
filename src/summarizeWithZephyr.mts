@@ -1,10 +1,10 @@
 import { HfInference } from "@huggingface/inference"
 
 import { createZephyrPrompt } from "./createZephyrPrompt.mts"
-import { hfInferenceApiModel, huggingfaceApiKey } from "./config.mts"
+import { hfInferenceApiModel, hfApiKey } from "./config.mts"
 
 
-const hf = new HfInference(huggingfaceApiKey)
+const hf = new HfInference(hfApiKey)
 
 export async function summarizeWithZephyr({
   news,
