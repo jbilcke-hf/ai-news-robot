@@ -17,7 +17,7 @@ export async function uploadMarkdownPrompt({
   const credentials = { accessToken: hfApiKey }
   
   // Convert base64 string a Buffer
-  const blob = new Blob([JSON.stringify(markdown, null, 2)])
+  const blob = new Blob([markdown])
 
   const id = uuidv4()
   const uploadFilePath = `prompt_${id}.md`
