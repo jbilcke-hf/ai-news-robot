@@ -18,10 +18,13 @@ try {
   console.log("using .env")
 }
 
-export const hfUsername = `${process.env.AI_NEWS_HUGGINGFACE_USERNAME || ""}`
-export const hfDataset = `${process.env.AI_NEWS_HUGGINGFACE_DATASET || ""}`
+export const hfUsername = `${process.env.AI_NEWS_ROBOT_HUGGINGFACE_USERNAME || ""}`
+export const hfDailyNewsDataset = `${process.env.AI_NEWS_ROBOT_DAILY_NEWS_DATASET || ""}`
+export const hfDailyPapersDataset = `${process.env.AI_NEWS_ROBOT_DAILY_PAPERS_DATASET || ""}`
+export const hfDailyWeatherDataset = `${process.env.AI_NEWS_ROBOT_DAILY_WEATHER_DATASET || ""}`
 
-export const hfApiKey = `${process.env.AI_NEWS_HUGGINGFACE_API_KEY || ""}`
-export const hfInferenceApiModel = `${process.env.AI_NEWS_HUGGINGFACE_INFERENCE_API_MODEL || ""}`
+export const hfApiKey = `${process.env.AI_NEWS_ROBOT_HUGGINGFACE_API_KEY || ""}`
+export const hfInferenceApiModel = `${process.env.AI_NEWS_ROBOT_HUGGINGFACE_INFERENCE_API_MODEL || ""}`
 
-export const newsdataApiKey = `${process.env.AI_NEWS_NEWSDATA_API_KEY || ""}`
+export const newsdataApiKey = `${process.env.AI_NEWS_ROBOT_NEWSDATA_API_KEY || ""}`
+export const weatherapiApiKey = `${process.env.AI_NEWS_ROBOT_WEATHERAPI_API_KEY || ""}`

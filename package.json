@@ -1,13 +1,13 @@
 {
-  "name": "ai-news-channel",
+  "name": "ai-news-robot",
   "version": "1.0.0",
   "description": "Embrace modernity",
   "main": "src/index.mts",
   "scripts": {
     "start": "tsx src/index.mts",
     "docker": "npm run docker:build && npm run docker:run",
-    "docker:build": "docker build -t ai-news-channel .",
-    "docker:run": "docker run -it -p 7860:7860 ai-news-channel"
+    "docker:build": "docker build -t ai-news-robot .",
+    "docker:run": "docker run -it -p 7860:7860 ai-news-robot"
   },
   "author": "Julian Bilcke <julian.bilcke@huggingface.co>",
   "license": "Apache License",

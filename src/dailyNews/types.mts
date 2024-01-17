@@ -1,11 +1,11 @@
-export type ApiResponse = {
+export type DailyNewsApiResponse = {
   status: string
   totalResults: number
-  results: ApiResult[]
+  results: DailyNewsApiResult[]
   nextPage: string
 }
 
-export type ApiResult = {
+export type DailyNewsApiResult = {
   article_id: string
   title: string
   link: string
@@ -26,7 +26,7 @@ export type ApiResult = {
 
   // ai_tag: string[]
   // sentiment: string
-  // sentiment_stats: SentimentStats
+  // sentiment_stats: DailyNewsSentimentStats
 
   // what we get in a free plan is this:
   // "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLAN",
@@ -37,7 +37,7 @@ export type ApiResult = {
   sentiment_stats: string
 }
 
-export type SentimentStats = {
+export type DailyNewsSentimentStats = {
   positive: number
   neutral: number
   negative: number

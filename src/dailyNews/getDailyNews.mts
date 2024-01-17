@@ -1,7 +1,7 @@
-import { newsdataApiKey } from "./config.mts"
-import { ApiResponse } from "./types.mts"
+import { newsdataApiKey } from "../config.mts"
+import { DailyNewsApiResponse } from "./types.mts"
 
-export async function getNews(): Promise<ApiResponse> {
+export async function getDailyNews(): Promise<DailyNewsApiResponse> {
 
   const q = [
     // "ai",
@@ -54,7 +54,7 @@ export async function getNews(): Promise<ApiResponse> {
     }`
   )
 
-  const json = (await res.json()) as ApiResponse
+  const json = (await res.json()) as DailyNewsApiResponse
 
   return json
 

@@ -1,6 +1,6 @@
-import { ApiResponse } from "./types.mts"
+import { DailyNewsApiResponse } from "./types.mts"
 
-export const sampleDataFreePlan: ApiResponse = {
+export const sampleDataFreePlan: DailyNewsApiResponse = {
   "status": "success",
   "totalResults": 41,
   "results": [

@@ -1,7 +1,8 @@
-import { ApiResponse } from "./types.mts"
 
 /*
-export const sampleDataFull: ApiResponse = {
+import { DailyNewsApiResponse } from "./types.mts"
+
+export const sampleDataFull: ApDailyNewsApiResponseiResponse = {
   "status":"success",
   "totalResults":15622,
   "results":[

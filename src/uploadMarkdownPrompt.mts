@@ -3,12 +3,14 @@ import { Blob } from "buffer"
 import { v4 as uuidv4 } from "uuid"
 import { uploadFile } from "@huggingface/hub"
 
-import { hfApiKey, hfDataset, hfUsername } from "./config.mts"
+import { hfApiKey, hfUsername } from "./config.mts"
 
 export async function uploadMarkdownPrompt({
   markdown,
+  dataset,
 }: {
   markdown: string
+  dataset: string
 }): Promise<string> {
   if (!markdown) {
     throw new Error(`the markdown cannot be empty`)
@@ -24,7 +26,7 @@ export async function uploadMarkdownPrompt({
 
   await uploadFile({
 	  credentials,
-    repo: `datasets/${hfUsername}/${hfDataset}`,
+    repo: `datasets/${hfUsername}/${dataset}`,
     file: {
       path: uploadFilePath,
       content: blob as any,
@@ -32,5 +34,7 @@ export async function uploadMarkdownPrompt({
     commitTitle: `[robot] Upload markdown prompt ${id}`,
   })
 
-  return `https://huggingface.co/datasets/${hfUsername}/${hfDataset}/resolve/main/${uploadFilePath}`
+  console.log(`successfully uploaded the file to ${hfUsername}/${dataset}`)
+  
+  return `https://huggingface.co/datasets/${hfUsername}/${dataset}/resolve/main/${uploadFilePath}`
 }
